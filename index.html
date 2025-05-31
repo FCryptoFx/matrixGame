@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archivo codificado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+
+<div id="screens">
+
+  <section id="screen0" class="screen active">
+    <p>Despierta...</p>
+  </section>
+
+  <section id="screen1" class="screen">
+    <div class="console-window">
+      <div class="console-titlebar">C:\Windows\System32\cmd.exe</div>
+      <div class="console-content">
+        <div class="big-question">?</div>
+        <button onclick="nextScreen()">Empezar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen2" class="screen">
+    <p>Has vivido en una prisión sin barrotes, sin olor, sin sabor.<br>
+    Una prisión para tu mente.<br>
+    Solo hay una forma de liberarte...<br>
+    Pero esta vez no es una pastilla.<br>
+    Es un chupito.<br><br>¿Qué eliges tomar?</p>
+    <div class="options">
+      <button onclick="checkAnswer(2, 'whisky')">Whisky</button>
+      <button onclick="checkAnswer(2, 'cassalla')">Cassalla</button>
+      <button onclick="checkAnswer(2, 'tequila')">Tequila</button>
+      <button onclick="checkAnswer(2, 'ron')">Ron</button>
+    </div>
+  </section>
+
+  <section id="screen3" class="screen">
+    <p>Todos tenemos nuestro destino.<br>
+    Podemos hacer cosas grandes.<br><br>
+    ¿Podrías ser tú el elegido?</p>
+    <div class="options">
+      <button onclick="checkAnswer(3, 'sí')">Sí</button>
+      <button onclick="checkAnswer(3, 'no')">No</button>
+      <button onclick="checkAnswer(3, 'tal vez')">Tal vez</button>
+    </div>
+  </section>
+
+  <section id="screen4" class="screen">
+    <p>No te dirá lo que quieres, sino lo que necesitas.<br>
+    ¿Cómo se llama el guía dentro de la simulación?</p>
+    <div class="options">
+      <button onclick="checkAnswer(4, 'jose')">Jose</button>
+      <button onclick="checkAnswer(4, 'morfeo')">Morfeo</button>
+      <button onclick="checkAnswer(4, 'neo')">Neo</button>
+      <button onclick="checkAnswer(4, 'smith')">Smith</button>
+    </div>
+  </section>
+
+  <section id="screen5" class="screen">
+    <p>Tras meses de letargo, es hora de despertar.<br>
+    Es hora de elegir la verdad.<br><br>
+    ¿Sabes en qué año estamos?</p>
+    <div class="options">
+      <button onclick="checkAnswer(5, '1999')">1999</button>
+      <button onclick="checkAnswer(5, '2023')">2023</button>
+      <button onclick="checkAnswer(5, '2025')">2025</button>
+      <button onclick="checkAnswer(5, '2050')">2050</button>
+    </div>
+  </section>
+
+  <section id="screen6" class="screen">
+    <h1>¿¿ / ?? / 2025</h1>
+    <p>Es el momento...</p>
+    <img src="https://i.imgur.com/RUO3XuT.jpg" alt="Morfeo Matrix" />
+    <div class="options">
+      <a href="https://chat.whatsapp.com/FLyELWZ6kvA6zSelZJjUWd" target="_blank">💊 Tomar la roja</a>
+      <button onclick="location.reload()">💊 Tomar la azul</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

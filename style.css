@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: black;
+  color: #00ff00;
+  overflow: hidden;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.screen {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  z-index: 10;
+  position: relative;
+}
+.screen.active {
+  display: flex;
+}
+.console-window {
+  border: 2px solid #00ff00;
+  background: black;
+  box-shadow: 0 0 10px #00ff00;
+}
+.console-titlebar {
+  background-color: #003300;
+  padding: 0.5rem;
+  border-bottom: 1px solid #00ff00;
+}
+.console-content {
+  padding: 2rem;
+}
+.big-question {
+  font-size: 4rem;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+button, .options a {
+  background: none;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 80%;
+  border: 2px solid #00ff00;
+  margin: 1rem 0;
+}
