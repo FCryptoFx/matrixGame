@@ -1,5 +1,5 @@
 const answers = {
-  2: ['whisky', 'cassalla', 'tequila', 'jagger'],
+  2: ['whisky', 'cassalla', 'jagger'],
   3: ['sí'],
   4: ['jose'],
   5: ['2025']
@@ -13,12 +13,40 @@ function nextScreen() {
   document.getElementById(`screen${currentScreen}`).classList.add('active');
 }
 
-function checkAnswer(screen, value) {
-  const valid = answers[screen];
-  if (valid.includes(value.toLowerCase())) {
-    nextScreen();
+function goToScreen(id) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.getElementById("screen" + id).classList.add("active");
+  currentScreen = id;
+}
+
+function checkAnswer(screen, answer) {
+  if (screen === 2) {
+    const correctAnswers = ['whisky', 'cassalla', 'jagger'];
+    switch (answer) {
+      case 'tequila':
+        alert("¿Que eres Sixito? Va, espabila.");
+        return;
+      case 'arros':
+        alert("¿Fiambre? Nonono.");
+        return;
+      case 'thunder':
+        alert("Va... Ara enserio...");
+        return;
+      default:
+        if (correctAnswers.includes(answer)) {
+          goToScreen(3);
+        } else {
+          alert("¿¿¿¿¿Enserio?????");
+        }
+        return;
+    }
   } else {
-    alert("Respuesta incorrecta.");
+    const valid = answers[screen];
+    if (valid && valid.includes(answer.toLowerCase())) {
+      nextScreen();
+    } else {
+      alert("¿¿¿¿¿Enserio?????");
+    }
   }
 }
 
@@ -47,6 +75,7 @@ function drawMatrix() {
     drops[i]++;
   }
 }
+
 setInterval(drawMatrix, 33);
 
 setTimeout(() => {
